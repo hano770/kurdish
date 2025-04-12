@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">کەسایەتیە ناودارەکان</div>
+    <div class="menu">
+      <a href="index.html.html">سەرەکی</a>
+    </div>
+
+</div>
+
+  <!-- Page Title -->
+  <div class="title"> شەوکەت ڕەشید </div>
+  <img class="img-figures" src="shawkatrashid.jpg">
+  <div class="figures"><br>
+  <h6>ناساندن</h6><br>
+  <p>کۆتایی ساڵانی چلەکانی سەدەی ڕابردوو، قوتابخانەی مۆسیقای سەربازیی لە شاری کەرکووک خوێندووە و شارەزایی لە ئامێری کلارنێت پەیدا کردووە</p>
+  <br>
+  <h6>لەدایکبوون</h6>
+  <p>شەوکەت ڕەشید عیزەت ناوی تەواوی ئەم هونەرمەندەیە و ساڵی 1933 لە گەڕەکی مەڵکەندیی شاری سلێمانی لەدایک بووە.</p>
+  <br>
+   <h6>ژیاننامە</h6>
+  <p>ئەم هونەرمەندە لەگەڵ زۆربەی تیپە مۆسیقییەکانی کوردستاندا کاری کردووە لەوانە (مەولەوی، سلێمانی، سۆلاڤ، باواجی، هونەر و وێژەی کوردی، تەلەڤزیۆنی کەرکووک) .
+    هونەرمەند شەوکەت ڕەشید کاریگەریی هونەری لەسەر خانەوادەکەشی هەبووە و هەر بۆیەش سێ کوڕی ڕێچکەی هونەری ئەویان گرتووە و خزمەتیان بەبواری هونەریی موزیکی کوردی کردووە.
+    ئەم هونەرمەندە خۆشەویستە چەندین ئاواز و گۆرانی و تێکستی هۆنراوەیی جوانی وەک یادگاری لە دوای خۆی بەجێهێشتووە، کە بەهەمیشەیی بە نەمری ئەیهێڵنەوە.
+     </p>
+  <br>
+  <h6>چالاکی</h6>
+  <p>ساڵی 1963 لەگەڵ چەند هاوڕێیەکیدا تیپی مۆسیقای (سۆلاڤ) یان لە شاری کەرکووک دامەزراند.
+    وەک موزیکژەنیش بەئامێرە مۆسییقییەکان بەگشتی و کلارنێت بەتایبەتیی خزمەتی کردووە و لە دوای قادر دیلان دووەم هونەرمەندی کورد بووە کە ئەم ئامێرەی بەکارهێناوە و داهێنانی تێدا کردووە و لەشێوازی هونەری ڕۆژاوایی بۆ شێوازی هونەریی ڕۆژهەڵاتی سوودی لێوەر گرتووە و لەگەڵ هونەری کوردی موتوربەی کردووە.
+    ئاوازیشی بۆ گۆرانییەکانی خۆی و زۆر هونەرمەندی تر داناوە و خاوەنی چەندین ئاوازی ناوازەیە.
+    هەروەها هۆنراوەیشی نووسیوە و کردوویەتی بەگۆرانی.
+    هەر لە بواری خزمەتکردنی هونەری کوردیدا، ساڵی 1984بەرنامەیەکی لە تەلەڤزیۆنی کەرکووک بەناوی (ئارەزوومەندان) پێشکەش کرد کە بایەخی بەدیداری هونەرمەندانی گەنج دەدا و لە ڕێی ئەو بەرنامەیەوە چەند هونەرمەندێکی لاو دەرکەوتن و ناسران.
+    </p>
+  <h6>کۆچی دوایی</h6>
+    <p>هونەرمەند دوای ساڵانێکی زۆر لەخزمەتکردن و بەکەلتووری کوردستان لە 17ی نیسانی 1991 بە نەخۆشی کۆچی دوایی کرد و لە گۆڕستانی شێخ محێدینی شاری سلێمانی بەخاک سپێردرا</p>
+    <br><br>
+    <h6> بەناوبانگترین گۆرانیكانى شەوکەت ڕەشید</h6>
+    <p>(ئایە و ئۆیە)</p>
+    <p>(چاوەڕوانی)</p>
+    <p>(هەستە با بڕۆین کیژی جوان)</p><br>
+    <h6>ئایە و ئۆیە</h6><br>
+    </div>
+    <!--Audio player-->
+    <div class="audio-player">
+      <button id="playPauseBtn">▶️</button>
+      <input type="range" id="seekBar" value="0">
+      <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    </div>
+    <audio id="audio" src="shawkat rashid.m4a"></audio>
+    <script >
+      //Audio player
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const seekBar = document.getElementById('seekBar');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const volumeControl = document.getElementById('volumeControl');
+    
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = '⏸️';
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = '▶️';
+        }
+    });
+    
+    audio.addEventListener('timeupdate', () => {
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+    
+    audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+    
+    seekBar.addEventListener('input', () => {
+        audio.currentTime = (seekBar.value / 100) * audio.duration;
+    });
+    
+    volumeControl.addEventListener('input', () => {
+        audio.volume = volumeControl.value;
+    });
+    
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+    </script>
+    </body>
+    </html>

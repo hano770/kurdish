@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">کەسایەتیە ناودارەکان</div>
+            <div class="menu">
+              <a href="index.html.html" >سەرەکی</a>
+              <a href="news.html">هەواڵ</a>
+              <a href="about.html">دەربارەی ئێمە</a>
+            </div>
+        
+        
+        </div>
+        <div class="title"> هەواڵ</div>
+
+        <div class="carousel-container" >
+            <div class="image-carousel">
+                <div class="carousel-track">
+                  <img src="news1.jpg" alt="Image 2" class="carousel-image">
+                  <img src="news2.jpg" alt="Image 1" class="carousel-image">
+                  <img src="news3.jpg" alt="Image 3" class="carousel-image">
+                </div>
+              
+              <button class="carousel-btn left-btn">❮</button>
+              <button class="carousel-btn right-btn">❯</button>
+            </div>
+        </div>
+        <!-- Description Section -->
+         <div class="description-container">
+            <p>
+                <br>نووسەر و شانۆکار، مەریوان زەنگەنە لە پێشبڕکێی تێکستی شانۆیی، لە نۆزدەیەمین خولی ڤیستیڤاڵی نێودەوڵەتی (شانۆیی کوردی سەقز) خەڵاتی باشترین دەقی شانۆیی بەدەستهێنا<br>
+فێستیڤاڵی شانۆی سەقز یەکێکە لە بەنێوبانگترین فیستیڤاڵەکانی شانۆ، کە ساڵانە لە شاری سەقزی ڕۆژهەڵاتی کورستان ئەنجام دەدرێت، ئەم فێستیڤاڵە، ساڵی 1999یەکەم خولی دەستی پێکرد و تا ئێستا بەردەوامە<br>
+نووسەر و شانۆکار مەریوان زەنگەنە خەڵکی شاری کەرکووکە و بە شانۆیی (گەمەیەکی دژوار) بەشداری لە فیستیڤاڵی نێودەوڵەتی شانۆی کوردی سەقز کرد کە هەفتەی ڕابردوو لە شاری سەقز بەڕێوە چوو<br>
+لە فیشتیڤاڵەکەدا مەریوان زەنگەنە لەنێوان چل تێکستی شانۆییدا توانیی پلەی یەکەم بەدەست بهێنێت بۆ دەقە شانۆییەکەی و لەنێوان هەموویاندا ببێتە یەکەم و خەڵاتەکە بباتەوە<br>
+جێی باسە فیستیڤاڵەکە ساڵانە لە وەرزی پاییزدا بە بەشداری چەندین کەسایەتیی نێو بواری هونەر بەڕێوە دەچێت
+            </p><br>
+        </div>
+            <!--JavaScript Code-->
+    <script >
+                document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.carousel-track');
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+  let index = 0;
+
+  if (!track) {
+    console.error('Carousel track not found!');
+    return;
+  }
+
+  // Auto-slide every 3 seconds
+  setInterval(() => {
+    index = (index + 1) % 3;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    console.log(`Auto-slide to image: ${index}`);
+  }, 3000);
+
+  // Manual sliding: next image
+  rightBtn.addEventListener('click', () => {
+    index = (index + 1) % 3;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    console.log(`Right button clicked. Image: ${index}`);
+  });
+
+  // Manual sliding: previous image
+  leftBtn.addEventListener('click', () => {
+    index = (index - 1 + 3) % 3; 
+    track.style.transform = `translateX(-${index * 100}%)`;
+    console.log(`Left button clicked. Image: ${index}`);
+  });
+});
+
+            </script>
+
+    </body>
+</html>

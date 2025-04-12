@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">کەسایەتیە ناودارەکان</div>
+    <div class="menu">
+      <a href="index.html.html">سەرەکی</a>
+    </div>
+
+</div>
+
+  <!-- Page Title -->
+  <div class="title"> شیڤان پەروەر</div>
+  <img class="img-figures" src="shvanperwer.jpg">
+  <div class="figures"><br>
+  <h6>ناساندن</h6><br>
+  <p>شیڤان پەروەر شاعیر، نووسەر، مامۆستای مۆسیقا، گۆرانیبێژی کورد،</p>
+  <br>
+  <h6>لەدایکبوون</h6>
+  <p> لە دایکبووی ئیسماعیل ئایگون لە ٢٣ی کانوونی دووەمی ١٩٥٥.</p>
+  <br>
+   <h6>ژیاننامە</h6>
+  <p>پەروەر لە ساڵی ١٩٧٦ بەهۆی ناسیۆنالیزمی کوردی و تۆنی سیاسی مۆسیقاکەی لە تورکیا هەڵهات و بۆ ماوەی ٣٧ ساڵ لە غوربەتی بەردەوامدا ژیاوە تا گەڕانەوەی بۆ دیاربەکر لە ١٦ی تشرینی دووەمی ٢٠١٣ تا ئەمڕۆش لە دەربەدەریدا دەژی. </p>
+  <br>
+  <h6>چالاکی</h6>
+  <p>پەروەر چەندین دکتۆرای فەخری لە بواری مۆسیقادا هەیە شڤان پەروەر یەکەم هونەرمەند بو کە لە سەردەمی ڕژێمی تورکدا لە باکوری کوردستان توانی کۆنسێرتێکی گۆرانی وتن بە زمانی کوردی ئەنجام بدات</p>
+  <h6>کۆچی دوایی</h6>
+    <p>لە ژیاندا ماوە</p>
+    <br><br>
+    <h6> بەناوبانگترین گۆرانیكانى شیڤان پەروەر</h6>
+    <p>(نازێ)</p>
+    <p>(هێڤیا تە)</p>
+    <p>(کینە ئەم)</p><br>
+    <h6>کینە ئەم</h6><br>
+    </div>
+    <!--Audio player-->
+    <div class="audio-player">
+      <button id="playPauseBtn">▶️</button>
+      <input type="range" id="seekBar" value="0">
+      <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    </div>
+    <audio id="audio" src="shvan parwar.m4a"></audio>
+  
+    <script >
+      //Audio player
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const seekBar = document.getElementById('seekBar');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const volumeControl = document.getElementById('volumeControl');
+    
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.textContent = '⏸️';
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = '▶️';
+        }
+    });
+    
+    audio.addEventListener('timeupdate', () => {
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+    
+    audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+    
+    seekBar.addEventListener('input', () => {
+        audio.currentTime = (seekBar.value / 100) * audio.duration;
+    });
+    
+    volumeControl.addEventListener('input', () => {
+        audio.volume = volumeControl.value;
+    });
+    
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">کەسایەتیە ناودارەکان</div>
+    <div class="menu">
+      <a href="index.html.html">سەرەکی</a>
+    </div>
+
+</div>
+
+  <!-- Page Title -->
+  <div class="title"> عەلی مەردان</div>
+  <img class="img-figures" src="alimardan.jpg">
+  <div class="figures"><br>
+  <h6>ناساندن</h6><br>
+  <p>عەلی مەردان گۆرانیبێژ مەقامبێژێکی کورد بوو</p>
+  <br>
+  <h6>لەدایکبوون</h6>
+  <p>عەلی مەردان لە ١٩٠٤ لە شاری کەرکووک  لە گەڕەکی تەکیەی شێخ عەلی لە دایک بووە.</p>
+  <br>
+   <h6>ژیاننامە</h6>
+  <p>مامۆستا، خوێندنی لە تەکیەی کەرکووک و لە لای ماموستا ساڵەح دەست پێکردوە و ھەر لەوێشەوە لە لای مامۆستای دەنگ خۆش مەلا ڕەووففێری  تەجویدی قورئان و ھەندێ مەقاماتی کوردی و قۆڕیاتی تورکمانی بووە.
+عەلی مەردان پاش ھەشت ساڵ تەکیە، شاری کەرکووکی بە جێھێشتووە و بە ماڵەوە چووە بۆ گوندی لەیلان  لەو گوندەدا تەموورە  ژەنێکی بە توانا بە ناوی خدر بارام  ناسیوە کە سوودێکی زۆری لێ وەرگرتوە بۆ مەقاماتی کوردی،  بەڵام لە دوایدا کە دەچێت بۆ بەغدا، مەقاماتی کوردی  و فارسی و عەرەبی لە مامۆستایانی تری فارس  و عەرەب و کوردەوە فێر دەبێت و وەک شارەزایەک لە بواری مەقاماتی ناوچەکەدا جێگای خۆی دەبینێتەوە.
+    ھەر لەم بارەوە مامۆستا دەڵێت: مەقاماتی  کوردی سەرچاوەیەکی کوردی دەوڵەمەندن بۆ ھونەری موزیک  و گۆرانی  گەلانی ناوچەکە. مامۆستا عەلی مەردان جگە لە دەنگە بەسۆز و ڕەسەنەکەی شارەزای ژەنینی چەن ئامێری مۆسیقا بووە کە خۆی ئامێری عودی زیاتر لا پەسەند بووە. ھەروەھا شارەزای زمان و ئەدەبی کوردی، عەرەبی، فارسی و تورکمانی  بووە. شیعری زۆربەی شاعیرەکانی لە دەیان بەستە  و مەقامات دا خوێندووەتەوە. عەلی مەردان مەقام زان و داھێنەری کورد</p>
+  <h6>چالاکی</h6>
+  <p>عەلی مەردان لە ماوەی ژیانیدا گەلێ گۆرانی  و مەقامیڕەسەنی  تۆمارکردووە، ئاوازی ھەندێک لە گۆرانییەکانیشی ھێندە بەرزن، بەچەند زمانێکی دی وتراونەتەوە.
+    شارەزایی و کارامەیی مامۆستا عەلی مەردان لە ھونەری مەقام دا ئەوەندە ئاشکرایە کە مامۆستاکانی مەقامی عێراقی عەلی مەردان بەمامۆستا و ڕابەری خۆیان دەزانن. مامۆستا عەلی مەردان کوردێکی دڵسۆز و خاوەنی ھەستێکی پاکی کوردایەتی بوو. ھەتا ڕۆژی کۆچکردنیشی، کە سوێندی بخواردایە، ھەر بە کوردستان سوێندی دەخوارد.</p>
+  <h6>کۆچی دوایی</h6>
+    <p>لە ڕۆژی ھەینی ساڵی ١٩٨١کۆچی دوای کردووە لەگۆرستانی شێخ محێدین نێژراوە لە دوا وتەیدا داوا دەکات لە گردی سەیوان لە لای شاعیران و ھونەرمەندان بینێژن تا ھیچ کات و زەمەنێک لە ھونەر و ھونەرمەندان دوور نەبێت.</p>
+    <br><br>
+
+<h6> بەناوبانگترین گۆرانیكانى عەلی مەردان</h6>
+<p>(فاتیمە)</p>
+<p>(گیانە بەسیەتی)</p>
+<p>(خۆم و عودەکەم)</p><br>
+<h6>فاتیمە</h6>
+</div>
+<!--Audio player-->
+<div class="audio-player">
+  <button id="playPauseBtn">▶️</button>
+  <input type="range" id="seekBar" value="0">
+  <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+</div>
+<audio id="audio" src="Ali mardan.mp3"></audio>
+<br> <br>
+<script >
+  //Audio player
+const audio = document.getElementById('audio');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const seekBar = document.getElementById('seekBar');
+const currentTimeEl = document.getElementById('currentTime');
+const durationEl = document.getElementById('duration');
+const volumeControl = document.getElementById('volumeControl');
+
+playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = '⏸️';
+    } else {
+        audio.pause();
+        playPauseBtn.textContent = '▶️';
+    }
+});
+
+audio.addEventListener('timeupdate', () => {
+    seekBar.value = (audio.currentTime / audio.duration) * 100;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+audio.addEventListener('loadedmetadata', () => {
+    durationEl.textContent = formatTime(audio.duration);
+});
+
+seekBar.addEventListener('input', () => {
+    audio.currentTime = (seekBar.value / 100) * audio.duration;
+});
+
+volumeControl.addEventListener('input', () => {
+    audio.volume = volumeControl.value;
+});
+
+function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+</script>
+</body>
+</html>

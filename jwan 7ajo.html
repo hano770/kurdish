@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">کەسایەتیە ناودارەکان</div>
+    <div class="menu">
+      <a href="index.html.html">سەرەکی</a>
+    </div>
+
+</div>
+
+  <!-- Page Title -->
+  <div class="title"> جوان حاجۆ</div>
+  <img class="img-figures" src="jwanaj.pg.jpg">
+  <div class="figures"><br>
+  <h6>ناساندن</h6><br>
+  <p>گۆرانی بێژی خۆرئاوای کوردستانە</p>
+  <br>
+  <h6>لەدایکبوون</h6>
+  <p> ١٧ی ئابی ١٩٥٧ (تەمەن ٦٧ ساڵ)
+    قامیشلۆ، سوریا لە دایک بوە</p>
+  <br>
+   <h6>ژیاننامە</h6>
+  <p>جوان حاجۆ گۆرانیبێژی کوردی سوریایە. لە شاری تیربەسپی لە نزیک قامیشلۆ لە باکوری سوریا لە دایک بووە. باپیرەی لە بنەڕەتدا خەڵکی دۆغانچای تورکیا بووە. دوای تەواوکردنی خوێندنی ئامادەیی، بە مەبەستی درێژەدان بە خوێندن بەرەو ئەڵمانیا بەڕێکەوت. لە زانکۆی ڕوهر بۆچۆم مۆسیقازانی خوێندووە. ئێستا لە سوید نیشتەجێیە</p>
+  <br>
+    </p>
+  <h6>کۆچی دوایی</h6>
+    <p>لە ژیاندا ماوە</p>
+    <br><br>
+    <h6> بەناوبانگترین گۆرانیكانى جوان حاجۆ</h6>
+<p>(کوردستان)</p>
+<p>(لێ لێ دینێ)</p>
+<p>(هەی دلبەرێ)</p><br>
+<h6>ئەسمەر</h6><br>
+</div>
+<!--Audio player-->
+<div class="audio-player">
+  <button id="playPauseBtn">▶️</button>
+  <input type="range" id="seekBar" value="0">
+  <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+</div>
+<audio id="audio" src="jwan hajo.m4a"></audio>
+
+<script >
+  //Audio player
+const audio = document.getElementById('audio');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const seekBar = document.getElementById('seekBar');
+const currentTimeEl = document.getElementById('currentTime');
+const durationEl = document.getElementById('duration');
+const volumeControl = document.getElementById('volumeControl');
+
+playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = '⏸️';
+    } else {
+        audio.pause();
+        playPauseBtn.textContent = '▶️';
+    }
+});
+
+audio.addEventListener('timeupdate', () => {
+    seekBar.value = (audio.currentTime / audio.duration) * 100;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+audio.addEventListener('loadedmetadata', () => {
+    durationEl.textContent = formatTime(audio.duration);
+});
+
+seekBar.addEventListener('input', () => {
+    audio.currentTime = (seekBar.value / 100) * audio.duration;
+});
+
+volumeControl.addEventListener('input', () => {
+    audio.volume = volumeControl.value;
+});
+
+function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+</script>
+</body>
+</html>
