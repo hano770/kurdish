@@ -421,6 +421,7 @@ span {
   /*size*/
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+    
   .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Responsive sizing */
