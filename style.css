@@ -452,12 +452,12 @@ span {
     padding: 10px;
   }
   .card{
-    width: 110px; /* Ensure cards take full width inside grid */
-    height: 250px; /* Allow cards to resize proportionally */
+    width: 200px; /* Ensure cards take full width inside grid */
+    height: 200px; /* Allow cards to resize proportionally */
   }
   .card img {
-    width:2cm;
-    max-height: 200px;
+    width:3cm;
+    max-height: 250px;
     object-fit: cover;
     filter: grayscale(100%);
   }
