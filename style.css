@@ -455,19 +455,19 @@ span {
     height: 300px; /* Allow cards to resize proportionally */
   }
   .card img {
-    width:5cm;
+    width:4cm;
     max-height: 230px;
     object-fit: cover;
     filter: grayscale(100%);
   }
   .navbar .logo {
-    font-size: 20px;
+    font-size: 18px;
  }
  .navbar .menu {
   gap: 10px;
  }
  .navbar .menu a{
-  font-size: 18px;
+  font-size: 17px;
  }
  .catagores{
   gap: 20px;
@@ -485,11 +485,11 @@ span {
   height: 20px;
 }
 .title  {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 .title h6{
-  font-size: 20px;
+  font-size: 18px;
   
 }
 .carousel-image {
@@ -502,7 +502,7 @@ span {
   height: 0cm;
 }
 .img-figures{
-  margin-left: 2cm;
+  margin-left: 1cm;
 }
 .figures p{
   font-size: 18px;
@@ -511,7 +511,7 @@ span {
   font-size: 20px;
 }
 .audio-player {
-  margin-left: 1cm;
+  margin-left: 0cm;
 }
 
 }
