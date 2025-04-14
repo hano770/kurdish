@@ -446,13 +446,13 @@ span {
 @media (max-width: 575.98px) {
   .grid{
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Responsive sizing */
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); /* Responsive sizing */
     gap: 10px;
     padding: 10px;
   }
   .card{
-    width: 230px; /* Ensure cards take full width inside grid */
-    height: 300px; /* Allow cards to resize proportionally */
+    width: 150px; /* Ensure cards take full width inside grid */
+    height: 200px; /* Allow cards to resize proportionally */
   }
   .card img {
     width:4cm;
