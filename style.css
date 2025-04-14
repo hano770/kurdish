@@ -451,8 +451,8 @@ span {
     padding: 10px;
   }
   .card{
-    width: 50px; /* Ensure cards take full width inside grid */
-    height: 200px; /* Allow cards to resize proportionally */
+    width: 110px; /* Ensure cards take full width inside grid */
+    height: 250px; /* Allow cards to resize proportionally */
   }
   .card img {
     width:2cm;
