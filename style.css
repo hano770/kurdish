@@ -447,16 +447,16 @@ span {
   .grid{
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr)); /* Responsive sizing */
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
   }
   .card{
-    width: 150px; /* Ensure cards take full width inside grid */
+    width: 50px; /* Ensure cards take full width inside grid */
     height: 200px; /* Allow cards to resize proportionally */
   }
   .card img {
-    width:4cm;
-    max-height: 230px;
+    width:2cm;
+    max-height: 200px;
     object-fit: cover;
     filter: grayscale(100%);
   }
